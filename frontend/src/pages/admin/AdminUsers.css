@@ -1,0 +1,24 @@
+.admin-users { display: flex; flex-direction: column; gap: 20px; }
+.users-toolbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+.search-box { display: flex; align-items: center; gap: 10px; background: white; border: 1px solid rgba(107,26,42,0.1); border-radius: 8px; padding: 10px 14px; width: 100%; max-width: 420px; }
+.search-box input { flex: 1; border: none; outline: none; background: transparent; font-size: 0.95rem; color: var(--text-primary); }
+.users-grid { display: grid; gap: 16px; grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) ); }
+.user-card { background: white; border: 1px solid rgba(107,26,42,0.08); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 16px; }
+.user-card-header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.user-name { margin: 0 0 4px; font-size: 1rem; font-weight: 700; color: var(--burgundy-dark); }
+.user-email { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
+.user-role { padding: 6px 10px; border-radius: 999px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.user-role.admin { background: rgba(255,214,0,0.12); color: var(--gold); }
+.user-role.client { background: rgba(107,26,42,0.08); color: var(--burgundy); }
+.user-card-body p { margin: 4px 0; font-size: 0.9rem; color: var(--text-secondary); }
+.user-card-actions { display: flex; justify-content: flex-end; }
+.icon-btn { display: inline-flex; align-items: center; gap: 8px; border: none; background: var(--burgundy); color: white; padding: 14px 23px; border-radius: 10px; cursor: pointer; transition: background 0.2s; }
+.icon-btn.edit:hover { background: var(--burgundy-dark); }
+.user-form { display: grid; gap: 16px; }
+.form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group label { font-size: 0.9rem; color: var(--burgundy-dark); }
+.form-group input, .form-group select { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(107,26,42,0.12); background: #fff; color: var(--text-primary); }
+.form-actions { display: flex; justify-content: flex-end; gap: 12px; }
+.btn { cursor: pointer; }
+@media (max-width: 720px) { .form-row { grid-template-columns: 1fr; } }

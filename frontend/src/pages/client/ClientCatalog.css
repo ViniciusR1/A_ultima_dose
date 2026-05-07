@@ -1,0 +1,20 @@
+.client-catalog { display: flex; flex-direction: column; gap: 20px; }
+.catalog-toolbar { display: flex; gap: 12px; align-items: center; }
+.search-box { display: flex; align-items: center; gap: 10px; background: white; border: 1px solid rgba(107,26,42,0.15); border-radius: 4px; padding: 0 14px; flex: 1; }
+.search-box input { border: none; outline: none; padding: 10px 0; font-family: var(--font-body); font-size: 15px; background: none; width: 100%; }
+.cart-fab { display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--burgundy); color: white; border: none; border-radius: 4px; font-family: var(--font-body); font-size: 14px; cursor: pointer; position: relative; transition: background 0.2s; white-space: nowrap; }
+.cart-fab:hover { background: var(--burgundy-dark); }
+.fab-badge { background: var(--gold); color: var(--charcoal); font-size: 11px; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); }
+.category-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.cat-tab { padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(107,26,42,0.15); background: white; font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); cursor: pointer; transition: all 0.2s; }
+.cat-tab:hover { border-color: var(--burgundy); color: var(--burgundy); }
+.cat-tab.active { background: var(--burgundy); border-color: var(--burgundy); color: white; }
+.loading-text, .empty-text { color: var(--text-secondary); font-style: italic; text-align: center; padding: 40px; }
+.catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+.checkout-bar { position: sticky; bottom: 0; background: var(--charcoal); color: var(--cream); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); margin: 0 -32px -32px; }
+.checkout-bar strong { font-family: var(--font-display); font-size: 1.1rem; color: var(--gold); }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group label { font-size: 12px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); }
+.form-group input, .form-group select { padding: 9px 12px; border: 1px solid rgba(107,26,42,0.2); border-radius: 4px; font-family: var(--font-body); font-size: 15px; outline: none; transition: border-color 0.2s; }
+.form-group input:focus, .form-group select:focus { border-color: var(--burgundy); }
+.error-msg { color: #dc2626; font-size: 12px; }

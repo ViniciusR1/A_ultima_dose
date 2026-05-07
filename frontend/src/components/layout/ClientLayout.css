@@ -1,0 +1,23 @@
+.client-layout { display: flex; min-height: 100vh; background: #f5efe0; }
+.client-sidebar { width: 240px; background: var(--cream-dark); border-right: 1px solid rgba(107,26,42,0.12); display: flex; flex-direction: column; position: fixed; top: 0; bottom: 0; }
+.client-sidebar-header { display: flex; align-items: center; gap: 10px; padding: 20px 16px; border-bottom: 1px solid rgba(107,26,42,0.12); font-family: var(--font-display); font-size: 1.1rem; color: var(--burgundy-dark); }
+.client-sidebar-user { display: flex; align-items: center; gap: 12px; padding: 20px 16px; border-bottom: 1px solid rgba(107,26,42,0.1); }
+.client-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--burgundy); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; flex-shrink: 0; }
+.client-name { font-size: 14px; font-weight: 500; color: var(--charcoal); }
+.client-tag { font-size: 11px; color: var(--burgundy); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; }
+.client-nav { flex: 1; padding: 16px 8px; display: flex; flex-direction: column; gap: 4px; }
+.client-link { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 4px; color: var(--text-secondary); font-size: 14px; transition: all 0.2s; }
+.client-link:hover { background: rgba(107,26,42,0.07); color: var(--burgundy); }
+.client-link.active { background: var(--burgundy); color: var(--cream); }
+.client-logout { display: flex; align-items: center; gap: 12px; padding: 14px 20px; margin: 8px; background: none; border: 1px solid rgba(107,26,42,0.15); border-radius: 4px; color: var(--text-secondary); font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); }
+.client-logout:hover { border-color: var(--burgundy); color: var(--burgundy); }
+.client-main { flex: 1; margin-left: 240px; display: flex; flex-direction: column; }
+.client-topbar { background: white; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 16px 32px; position: sticky; top: 0; z-index: 10; }
+.client-topbar h1 { font-family: var(--font-display); font-size: 1.6rem; color: var(--burgundy-dark); }
+.client-content { padding: 32px; flex: 1; }
+@media (max-width: 768px) {
+  .client-sidebar { width: 56px; }
+  .client-sidebar-header span, .client-sidebar-user, .client-link span, .client-logout span { display: none; }
+  .client-main { margin-left: 56px; }
+  .client-content { padding: 16px; }
+}
