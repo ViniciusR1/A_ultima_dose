@@ -1,0 +1,11 @@
+import express from 'express';
+import { authenticate, requireAdmin } from '../middleware/auth.js';
+import { getProfile, updateProfile, getAdminStats, getUsers, getUser, updateUser } from '../controllers/profiles.js';
+const router = express.Router();
+router.get('/me', authenticate, getProfile);
+router.put('/me', authenticate, updateProfile);
+router.get('/admin/stats', authenticate, requireAdmin, getAdminStats);
+router.get('/', authenticate, requireAdmin, getUsers);
+router.get('/:id', authenticate, requireAdmin, getUser);
+router.put('/:id', authenticate, requireAdmin, updateUser);
+export default router;

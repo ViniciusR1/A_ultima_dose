@@ -1,0 +1,10 @@
+import express from 'express';
+import { authenticate, requireAdmin } from '../middleware/auth.js';
+import { getProducts, getProduct, createProduct, updateProduct, deleteProduct } from '../controllers/products.js';
+const router = express.Router();
+router.get('/', getProducts);
+router.get('/:id', getProduct);
+router.post('/', authenticate, requireAdmin, createProduct);
+router.put('/:id', authenticate, requireAdmin, updateProduct);
+router.delete('/:id', authenticate, requireAdmin, deleteProduct);
+export default router;
