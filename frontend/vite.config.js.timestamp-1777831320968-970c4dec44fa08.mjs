@@ -5,7 +5,7 @@ var vite_config_default = defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": "https://a-ultima-dose.onrender.com"
+      "/api": "https://a-ultima-dose.onrender.com/api"
     }
   }
 });
